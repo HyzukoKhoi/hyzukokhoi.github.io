@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Funnel Display', sans-serif;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Xếp Header, Container, Footer theo hàng dọc */
+    min-height: 100vh;      /* Chiều cao tối thiểu bằng 100% khung hình thiết bị */
+}
+
+main {
+    flex: 1;               /* Chiếm toàn bộ không gian còn trống ở giữa */
+    display: flex;         /* Biến main thành môi trường flex để chứa .container */
+    flex-direction: column;
+}
+
+/* Navigation Bar CSS */
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(40, 43, 63);
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgb(29, 31, 46);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+nav ul li a:active {
+    background-color: rgb(29, 31, 46);
+    color: #fff;
+    transform: translateY(0);
+}
+
+/* My Profile CSS */
+.container {
+    flex: 1;
+
+    display: flex;
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container .card {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container .card .content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1px;
+}
+
+.container .card .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.container .card .image img {
+    width: 230px;
+    height: auto;
+    object-fit: cover;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.container .card .image img:hover {
+    transform: scale(1.02);
+}
+
+.container .card .social-links ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+}
+
+.container .card .social-links ul li a img {
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+.container .card .social-links ul li a img:hover {
+    transform: scale(1.1);
+}
+
+.container .card .social-links ul li a img:active {
+    transform: scale(0.7);
+}
+
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: rgb(40, 43, 63);
+}
+
+footer p {
+    color: white;
+}
+
